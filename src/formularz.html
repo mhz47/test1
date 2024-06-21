@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formularz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <h2>Formularz</h2>
+        </div>
+
+        <div class="row g-5">
+            <div class="d-flex justify-content-center align-items-center">
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+
+                        <div class="col-12">
+                            <label for="textField" class="form-label"><b>Pole tekstowe</b></label>
+                            <input type="text" class="form-control" id="textField" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label"><b>Checkbox</b></label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkboxField">
+                                <label class="form-check-label" for="checkboxField">Zaznacz opcję</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label"><b>Radio</b></label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioField" id="radioField1" checked>
+                                <label class="form-check-label" for="radioField1">Opcja 1</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioField" id="radioField2">
+                                <label class="form-check-label" for="radioField2">Opcja 2</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="selectField" class="form-label"><b>Select</b></label>
+                            <select class="form-select" id="selectField" required>
+                                <option value="">Wybierz...</option>
+                                <option>Opcja 1</option>
+                                <option>Opcja 2</option>
+                                <option>Opcja 3</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Zatwierdź</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2024 Przykładowy formularz Bootstrap</p>
+    </footer>
+</div>
+
+<script>
+    document.querySelector('.needs-validation').addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (!this.checkValidity()) {
+            alert('Proszę poprawnie uzupełnić formularz.');
+        } else {
+            alert('Wysłano formularz');
+            window.location.replace('index.html');
+        }
+        this.classList.add('was-validated');
+    }, false);
+</script>
+</body>
+</html>

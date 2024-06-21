@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>AWWW - Laboratoria HTML i CSS</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- żeby Tailwind nie psuł listy numerowanej liczbami rzymskimi -->
+    <style>
+        .roman-list > li {
+            list-style-type: upper-roman;
+        }
+    </style>
+</head>
+
+<body >
+    <header class="head text-3xl bg-gray-600 font-bold underline text-blue-300 text-center">
+        <h1> <br> AWWW - Laboratoria HTML i CSS </h1>
+        <p><br></p>
+    </header>
+
+    <div class="bar bg-gray-200">
+        <div class="m-4 menu">
+            <h3 class="text-xl text-sky-800"><b>Menu: </b> </h3>
+            <ul class="text-gray-700">
+                <li><a href="#h3-1"><u>Zadanie</u></a></li>
+                <li><a href="#h3-2"><u>Elementy zadania</u></a>
+                    <ul>
+                        <li><a href="#h4-1"> &rarr; <u>tabela</u></a></li>
+                        <li><a href="#h4-2"> &rarr; <u>lista</u></a></li>
+                        <li><a href="#h4-3"> &rarr; <u>wyróżnienia</u></a></li>
+                        <li><a href="#h4-4"> &rarr; <u>obrazek</u></a></li>
+                        <li><a href="#h4-5"> &rarr; <u>formularz</u></a></li>
+                        <li><a href="#h4-6"> &rarr; <u>rozwijany opis</u></a></li>
+                        <li><a href="#h4-7"> &rarr; <u>progressbar</u></a></li>
+                        <li><a href="#h4-8"> &rarr; <u>mapa</u></a></li>
+                        <li><a href="#h4-9"> &rarr; <u>demonstracja działania flex</u></a></li>
+                        <li><a href="#h4-10"> &rarr; <u>formularz Bootstrap</u></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <article class="main text-black bg-gray-100 p-5">
+        <h3 id="h3-1" class="text-xl text-sky-800">Zadanie: </h3>
+        <p class="text-sky-500">Celem zadania jest przeprzygotowanie strony internetowej w formacie HTML.</p>
+        <br>
+        <h3 id="h3-2" class="text-xl text-sky-800">Elementy zadania: </h3>
+
+        <h4 id="h4-1" class="bg-gray-200 text-sky-500">  -> tabela: </h4>
+        <div>
+            <table class="table-auto shadow-lg m-4 bg-white">
+                <caption>Popularność języków programowania</caption>
+                <tr>
+                    <th class="m-2 pl-4 pr-4"></th>
+                    <th class="m-2 pl-4">marzec 2024 </th>
+                    <th class="m-2 pl-4 pr-4">marzec 2023 </th>
+                </tr>
+                <tr class="text-center">
+                    <th class="m-2 pl-4">Python</th>
+                    <td>15.16%</td>
+                    <td>14.83%</td>
+                </tr>
+                <tr class="text-center">
+                    <th class="m-2 pl-4">C++</th>
+                    <td>10.53%</td>
+                    <td>13.29%</td>
+                </tr>
+                <tr class="text-center">
+                    <th class="m-2 pl-4">Java</th>
+                    <td>8.88%</td>
+                    <td>13.56%</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <h4 id="h4-2" class="bg-gray-200 text-sky-500">  -> lista: </h4>
+        <ol class="roman-list p-4 pl-9">
+            <li>C++</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ol>
+
+
+        <h4 id="h4-3" class="bg-gray-200 text-sky-500">  -> wyróżnienia: </h4>
+        <div class="p-4">
+            <p><strong>Pogrubiony tekst</strong></p>
+            <p><em>Kursywa</em></p>
+        </div>
+
+
+        <h4 id="h4-4" class="bg-gray-200 text-sky-500">  -> obrazek: </h4>
+        <img src="komp.png" alt="obrazek komputera" class="shadow-lg m-4">
+
+
+        <h4 id="h4-5" class="bg-gray-200 text-sky-500">  -> formularz: </h4>
+        <div class="flex flex-col p-4">
+            <div>
+                <form>
+                    <label>
+                        Język programowania:
+                        <select class="text-gray-500 bg-white shadow-lg m-4 ">
+                            <option value="nothing">wybierz język</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="python">Python</option>
+                            <option value="java">JAVA</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+            <div class="flex flex-row">
+                <form>
+                    Nazwa użytkownika:
+                    <label>
+                        <input type="text" name="poleTekstowe" autocomplete="name" class="w-64 h-10 text-gray-500 shadow-lg m-4">
+                    </label>
+                </form>
+                <form>
+                    <button type="submit" class="bg-gray-600 text-blue-300 text-center m-4 p-2 bottom-0.5">Save</button>
+                </form>
+            </div>
+        </div>
+
+
+        <h4 id="h4-6" class="bg-gray-200 text-sky-500">  -> rozwijany opis: </h4>
+        <details class="p-4">
+            <summary>język programowania <b class="animate-ping">&larr;</b></summary>
+            <p class="text-gray-500 text-xs">Zbiór zasad określających, kiedy ciąg symboli tworzy program komputerowy oraz jakie obliczenia opisuje. Teorią języków programowania w informatyce zajmuje się teoria języków formalnych.</p>
+        </details>
+
+
+        <h4 id="h4-7" class="bg-gray-200 text-sky-500">  -> progressbar: </h4>
+        <div class="p-4">
+            <progress value="50" max="100"></progress>
+        </div>
+
+
+        <h4 id="h4-8" class="bg-gray-200 text-sky-500"> -> mapa: </h4>
+        <map name="mapa">
+            <area
+                shape="circle"
+                coords="50,25,25"
+                href="https://pl.wikipedia.org/wiki/Python"
+                target="_blank"
+                alt="Python" >
+            <area
+                shape="circle"
+                coords="100,25,25"
+                href="https://pl.wikipedia.org/wiki/C%2B%2B"
+                target="_blank"
+                alt="C++" >
+            <area
+                shape="circle"
+                coords="150,25,25"
+                href="https://pl.wikipedia.org/wiki/Java"
+                target="_blank"
+                alt="Java" >
+        </map>
+        <img
+            usemap="#mapa"
+            src="screen.jpg"
+            alt="mapa języków <Python><C++><Java>"
+            class="shadow-lg m-4">
+
+
+
+        <h4 id="h4-9" class="bg-gray-200 text-sky-500"> -> demonstracja działania flex: </h4>
+
+        <div class="p-4">
+            <div class="flex flex-row">
+                <div class="bg-gray-400 w-16 h-16"></div>
+                <div class="bg-blue-300 w-16 h-16"></div>
+                <div class="bg-blue-400 w-16 h-16"></div>
+            </div>
+            <p class="pb-4 text-xs"> flex-row </p>
+
+            <div class="flex flex-col">
+                <div class="bg-gray-400 w-16 h-16"></div>
+                <div class="bg-blue-300 w-16 h-16"></div>
+                <div class="bg-blue-400 w-16 h-16"></div>
+            </div>
+            <p class="pb-4 text-xs"> flex-col</p>
+
+            <div class="flex flex-auto">
+                <div class="flex-auto bg-gray-400 w-16 h-16"></div>
+                <div class="flex-auto bg-blue-300 w-16 h-16"></div>
+                <div class="flex-auto bg-blue-400 w-16 h-16"></div>
+            </div>
+            <p class="pb-4 text-xs"> flex-auto</p>
+
+            <div class="flex flex-none">
+                <div class="flex-none bg-gray-400 w-16 h-16"></div>
+                <div class="flex-none bg-blue-300 w-16 h-16"></div>
+                <div class="flex-none bg-blue-400 w-16 h-16"></div>
+            </div>
+            <p class="text-xs"> flex-none</p>
+        </div>
+
+
+        <h4 id="h4-10" class="bg-gray-200 text-sky-500"> -> formularz Bootstrap </h4>
+        <div class="p-4">
+            <p>
+                <a href="formularz.html"><u>Przejdź do formularza Bootstrap</u></a>
+            </p>
+        </div>
+
+    </article>
+
+    <footer class="foot bg-gray-600 text-blue-300 text-center">
+        <p>Stopka</p>
+    </footer>
+
+</body>
+</html>

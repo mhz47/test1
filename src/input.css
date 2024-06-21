@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.head {
+    grid-area: head;
+}
+.main {
+    grid-area: main;
+}
+.bar {
+    grid-area: sidebar;
+}
+.foot {
+    grid-area: foot;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "head head"
+            "sidebar main"
+            "foot foot";
+}
+
+.menu {
+    position: sticky;
+    top: 5px;
+    bottom: 5px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.menu ul ul li {
+    padding-left: 10px;
+}
